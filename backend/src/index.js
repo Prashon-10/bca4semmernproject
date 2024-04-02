@@ -1,13 +1,13 @@
-import express from "express";
-import Connection from "./database/Connection.js";
+import express from 'express';
+import Connection from './database/Connection.js';
+import router from './router/web.js';
 const app = express();
 
 new Connection();
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
+app.use(express.json());
+app.use(router);
 
 app.listen(3000, () => {
-  console.log("Server is running on port 3000");
+    console.log('Server is running on port 3000');
 });
