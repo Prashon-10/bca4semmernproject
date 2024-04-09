@@ -130,6 +130,7 @@ export default function RegisterComponent() {
                 <option value="female">Female</option>
               </select>
             </div>
+
             <div className="form-group mb-2">
               <label htmlFor="image">Image</label>
               <input
