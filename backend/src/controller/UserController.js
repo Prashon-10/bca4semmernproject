@@ -30,7 +30,7 @@ class UserController {
             const salt = await bcrypt.genSalt(10);
             password = await bcrypt.hash(password, salt);
             const user = await User.create({ ...req.body, password, image });
-            res.status(201).json(user);
+            res.status(201).json({success:true});
         } catch (err) {
             res.status(500).json(err);
         }

@@ -1,10 +1,10 @@
-import React from 'react'
-import { Link, Outlet } from 'react-router-dom';
+import React from "react";
+import { Link, Outlet } from "react-router-dom";
 import "../css/admin.css";
 
 export default function AdminRouteMiddelware() {
   return (
-    <div className='admin'>
+    <div className="admin">
       <div className="top-header">
         <div className="container-fluid">
           <div className="row">
@@ -13,7 +13,7 @@ export default function AdminRouteMiddelware() {
             </div>
             <div className="col-md-9">
               <div className="logout">
-                <button className='btn btn-danger float-end'>Logout</button>
+                <button className="btn btn-danger float-end">Logout</button>
               </div>
             </div>
           </div>
@@ -35,10 +35,14 @@ export default function AdminRouteMiddelware() {
             <div className="col-md-12 mt-3">
               <ul className="nav flex-column">
                 <li className="nav-item">
-                  <Link to="" className="nav-link">Dashboard</Link>
+                  <Link to="" className="nav-link">
+                    Dashboard
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="#" className="nav-link">Users</Link>
+                  <Link to="/admin/users" className="nav-link">
+                    Users
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -55,5 +59,5 @@ export default function AdminRouteMiddelware() {
         </div>
       </div>
     </div>
-  )
+  );
 }
